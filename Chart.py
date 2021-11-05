@@ -8,6 +8,7 @@ def app():
     st.title('～数字で見るNBA～')
     st.write('このページはNBA入門者に向けて作ったものです。NBAに関する様々な数字を見て楽しんでいただけると幸いです。\
         長年見ている方にとっては当たり前すぎるかもしれません。それでも見ていただけるNクラの皆さんには感謝申し上げます。')
+    st.write('気になる箇所はその部分をタップしていただくと、具体的な数値が画面に出てきます')
     st.write('ここに載っている数字は、全てBASKETBALL REFERENCEから取ってきたものです。リンクを貼っておくので、気になる人は覗いてみてください。\
         色々な情報が載っていて面白いと思います。')
     st.markdown('<a href="https://www.basketball-reference.com/">BASKETBALL REFERENCE</a>',unsafe_allow_html=True)
