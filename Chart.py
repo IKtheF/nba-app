@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import matplotlib.pyplot as plt
+# from plotly.subplots import make_subplots
+# import matplotlib.pyplot as plt
 
 def app():
     st.title('～数字で見るNBA～')
@@ -25,335 +25,335 @@ def app():
     with col3:
         st.image('gianiss.jpg',use_column_width=True)
     
-    st.header('▼2020-21における各チームのスタッツ平均')
-    st.write('昨シーズンのチームごとのスタッツを載せておきます。下の選択ボックスからスタッツを選んでいただくとグラフが表示されます。')
-    st.write('それぞれのスタッツで最も大きな値に黄色い印が付いています。\
-        また、Teamもしくはそれぞれのスタッツを押すと、昇順または降順に並び替えることが出来ます。')
+#     st.header('▼2020-21における各チームのスタッツ平均')
+#     st.write('昨シーズンのチームごとのスタッツを載せておきます。下の選択ボックスからスタッツを選んでいただくとグラフが表示されます。')
+#     st.write('それぞれのスタッツで最も大きな値に黄色い印が付いています。\
+#         また、Teamもしくはそれぞれのスタッツを押すと、昇順または降順に並び替えることが出来ます。')
 
-    df=pd.read_csv('teamgraph.csv',usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21])
-    st.dataframe(df.style.highlight_max(axis=0))
+#     df=pd.read_csv('teamgraph.csv',usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21])
+#     st.dataframe(df.style.highlight_max(axis=0))
 
-    stats=st.selectbox('スタッツを選択してください',
-        ('選択ボックス','FG','FGA','FG%','3P','3PA','3P%','2P','2PA','2P%','FT','FTA','FT%','ORB','DRB','TRB','AST','STL','BLK','TOV','PF','PTS'))
+#     stats=st.selectbox('スタッツを選択してください',
+#         ('選択ボックス','FG','FGA','FG%','3P','3PA','3P%','2P','2PA','2P%','FT','FTA','FT%','ORB','DRB','TRB','AST','STL','BLK','TOV','PF','PTS'))
 
-    if stats!='選択ボックス':
-        if stats=='FG':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,45],color={'#377eb8'}))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#     if stats!='選択ボックス':
+#         if stats=='FG':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,45],color={'#377eb8'}))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='FGA':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[80,92]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='FGA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[80,92]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='FG%':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,50]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='FG%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,50]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='3P':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,17]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='3P':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,17]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='3PA':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[25,45]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='3PA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[25,45]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='3P%':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,42]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='3P%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,42]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='2P':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[20,35]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='2P':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[20,35]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='2PA':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,65]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='2PA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,65]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='2P%':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,57]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='2P%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,57]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='FT':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,21]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='FT':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,21]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='FTA':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,27]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='FTA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,27]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='FT%':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[70,84]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='FT%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[70,84]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='ORB':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,12]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='ORB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,12]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='DRB':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,38]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='DRB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[30,38]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='TRB':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,49]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='TRB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[40,49]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='AST':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[20,28]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='AST':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[20,28]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='STL':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,10]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='STL':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[5,10]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='BLK':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[0,7]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='BLK':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[0,7]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='TOV':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,17]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='TOV':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[10,17]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='PF':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[15,22]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='PF':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[15,22]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if stats=='PTS':
-            fig, ax = plt.subplots()
-            fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[100,122]))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if stats=='PTS':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df.plot(title='2020-21/{}'.format(stats),kind='bar',x='Team',y=stats,ylim=[100,122]))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-    st.header('▼2000-01 ~ 2020-21のスタッツの変化')
-    st.write('先程と同様にそれぞれのスタッツで最も大きな値に黄色い印が付いています。\
-        また、Teamもしくはそれぞれのスタッツを押すと、昇順または降順に並び替えることが出来ます。')
-    df1=pd.read_csv('stats.csv',usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23])
-    st.dataframe(df1.style.highlight_max(axis=0))
-    ave=st.selectbox('スタッツを選択してください',
-        ('選択ボックス','FG','FGA','3P','3PA','3P%','FT','FTA','ORB','DRB','TRB','AST','STL','BLK','TOV','PF','PTS','FG%','3P%','FT%','Pace','TOV%','ORB%','FT/FGA','ORtg'))
+#     st.header('▼2000-01 ~ 2020-21のスタッツの変化')
+#     st.write('先程と同様にそれぞれのスタッツで最も大きな値に黄色い印が付いています。\
+#         また、Teamもしくはそれぞれのスタッツを押すと、昇順または降順に並び替えることが出来ます。')
+#     df1=pd.read_csv('stats.csv',usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23])
+#     st.dataframe(df1.style.highlight_max(axis=0))
+#     ave=st.selectbox('スタッツを選択してください',
+#         ('選択ボックス','FG','FGA','3P','3PA','3P%','FT','FTA','ORB','DRB','TRB','AST','STL','BLK','TOV','PF','PTS','FG%','3P%','FT%','Pace','TOV%','ORB%','FT/FGA','ORtg'))
 
-    if ave!='選択ボックス':
-        if ave=='FG':
-            fig, ax = plt.subplots()
-            ax.invert_xaxis()
-            ax=st.write(df1.plot(color='#e41a1c',title='Field Goals Per Game',x='Season',y=ave))
-            st.pyplot(ax)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#     if ave!='選択ボックス':
+#         if ave=='FG':
+#             fig, ax = plt.subplots()
+#             ax.invert_xaxis()
+#             ax=st.write(df1.plot(color='#e41a1c',title='Field Goals Per Game',x='Season',y=ave))
+#             st.pyplot(ax)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FGA':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Field Goal Attempts Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FGA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Field Goal Attempts Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='3P':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goals Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='3P':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goals Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='3PA':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goal Attempts Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='3PA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goal Attempts Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FT':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title=' Free Throws Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FT':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title=' Free Throws Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FTA':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title=' Free Throw Attempts Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FTA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title=' Free Throw Attempts Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='ORB':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rebounds Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='ORB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rebounds Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='DRB':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Defensive Rebounds Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='DRB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Defensive Rebounds Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='TRB':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Total Rebounds Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='TRB':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Total Rebounds Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='AST':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Assists Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='AST':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Assists Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='STL':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Steals Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='STL':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Steals Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='BLK':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Blocks Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='BLK':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Blocks Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='TOV':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Turnovers Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='TOV':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Turnovers Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='PF':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Personal Fouls Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='PF':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Personal Fouls Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='PTS':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Points Per Game',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='PTS':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Points Per Game',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FG%':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Field Goal Percentage',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FG%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Field Goal Percentage',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='3P%':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goal Percentage',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='3P%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='3-Point Field Goal Percentage',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FT%':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Free Throw Percentage',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FT%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Free Throw Percentage',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='Pace':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Pace Factor: An estimate of possessions per 48 minutes',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='Pace':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Pace Factor: An estimate of possessions per 48 minutes',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='TOV%':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Turnover Percentage:An estimate of turnovers committed per 100 plays.',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='TOV%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Turnover Percentage:An estimate of turnovers committed per 100 plays.',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='ORB%':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rebound Percentage:An estimate of the percentage of available offensive rebounds a player grabbed while they were on the floor.',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='ORB%':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rebound Percentage:An estimate of the percentage of available offensive rebounds a player grabbed while they were on the floor.',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='FT/FGA':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Free Throws Per Field Goal Attempt',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='FT/FGA':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Free Throws Per Field Goal Attempt',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
-        if ave=='ORtg':
-            fig, ax = plt.subplots()
-            fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rating:An estimate of points produced (players) or scored (teams) per 100 possessions',x='Season',y=ave))
-            st.pyplot(fig)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            showPyplotGlobalUse = False
+#         if ave=='ORtg':
+#             fig, ax = plt.subplots()
+#             fig=st.write(df1.plot(color='#e41a1c',title='Offensive Rating:An estimate of points produced (players) or scored (teams) per 100 possessions',x='Season',y=ave))
+#             st.pyplot(fig)
+#             st.set_option('deprecation.showPyplotGlobalUse', False)
+#             showPyplotGlobalUse = False
 
     st.write('🏀・・・🏀・・・🏀・・・🏀・・・🏀・・・🏀・・・🏀・・・🏀・・・🏀・・・🏀')
     st.header('自分なりの考察')
