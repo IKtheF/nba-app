@@ -1,5 +1,5 @@
 import Home
-#import Chart
+import Chart
 import Quize
 import Use
 import Main
