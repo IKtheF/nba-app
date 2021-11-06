@@ -124,7 +124,6 @@ def app():
     expander5=st.expander('▼シーズン毎のリーグ全体の3Pointの試投数の推移')
     expander5.write('Splash Brothersが真価を発揮して以降、試投数が増えていたことはもちろん知っていたが、まさか20年前に比べて30本近くも増えているとは、、、')
     expander5.plotly_chart(fig_FG3A,use_column_width=True)
-    expander5.plotly_chart(fig_FG3A,use_column_width=True)
 
     expander6=st.expander('▼シーズン毎のリーグ全体のペースの推移')
     expander6.write('まず、ここで言うペースとは、An estimate of possessions per 48 minutes つまりチームが48分間（1試合）に使用するポゼッション数の推定値のことである。')
