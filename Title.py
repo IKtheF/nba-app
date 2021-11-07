@@ -6,7 +6,7 @@ import Main
 import streamlit as st
 
 PAGES={
-    "音声ファイルの文字起こし＆和訳":Main,
+    "音声ファイルまたは録画動画の文字起こし＆和訳":Main,
     "テキストを翻訳":Home,
     "NBAクイズ":Quize,
     "数字で見るNBA": Chart,
