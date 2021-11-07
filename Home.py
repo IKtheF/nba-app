@@ -21,4 +21,3 @@ def app():
             result = tr.translate(input_text,src=pre,dest=post).text
             st.subheader('▼翻訳結果')
             st.write(result)
-    st.write('※機種によってはアプリを開いた時にぺージの一番下から始まってしまうことがあります。')
