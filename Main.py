@@ -12,7 +12,7 @@ def app():
 #     st.write('--------------------------------------------------')
     st.write('パソコンの音声ファイルや、スマホで録画した動画の文字起こし＆翻訳')
     
-    st.header('～音声ファイルの文字起こし ＆ 翻訳～')
+    st.header('～文字起こし ＆ 翻訳～')
     fileObject = st.file_uploader(label = '下の"Browse files"をタップ（クリック）して音声ファイルをアップロードしてください' )
 
     if fileObject:
