@@ -1,6 +1,17 @@
 import streamlit as st
+import datetime as dt
 
 def app():
+    st.title('This Is My House')
+    now = dt.date.today()
+    st.write(f"Today is {now}")
+    st.image('nba_all_team.jpg')
+
+    st.header('概要')
+    st.write('このアプリは、TwitterなどでNBA選手たちのインタビューを見ていて「この人たちが何を言っているのか知りたい！」、「選手たちの生きた英語を利用して英語の学習がしたい！」\
+    と思い作成したものです。')
+    st.write('メインの機能は「音声ファイルの文字起こし＆翻訳」ですが、その他にも様々な機能を搭載しているので是非使用してみて下さい。詳しい使い方は、左のサイドバーの「使い方」からご覧ください。')
+
     st.header('使い方')
     st.write('このアプリの使い方を説明します。')
     
@@ -25,8 +36,25 @@ def app():
     video_bytes2=video_file2.read()
     st.video(video_bytes2)
 
-    st.write('--------------------------------------------------')
 
+    st.subheader('▼数字で見るNBAの使い方')
+    st.write('こちらに関しては、「数字で見るNBA」の本ページの方に詳しい説明は書いていますし、実際に触れていただいたほうが分かりやすいと思うので\
+        ここでの説明は割愛させていただきます。')
+    st.write('「自分なりの考察」は考察と呼ぶにはあまりに浅はかなものしか書いていませんが、もしよろしければご覧になってください（笑）')
+
+    
+    
     st.subheader('▼NBAクイズの使い方')
     st.write('詳しい使い方はこちらも「NBAクイズ」本編に記載してあります。\
         難易度は決して易しくはないですが、ぜひ80点以上の殿堂入り目指して頑張ってください！')
+    
+    st.header('お知らせ')
+    st.write('また、InstagramにNBAの絵を投稿しています。もし興味を持っていただけたなら、一度覗いてみてください！フォローもしていただけると嬉しいです！！')
+    st.write('リンクに飛べない方は"l3gacy_flash"で検索していただけると幸いです。')
+    st.markdown('<a href="https://www.instagram.com/l3gacy_flash">Instagramはこちらから！</a>',unsafe_allow_html=True)
+
+    st.header('おまけ')
+    music='videoplayback.mp4'
+    st.write('NBA好きならテンション上がること間違いなしの音楽を貼っておくので、ぜひ聞いてみてください！')
+    st.audio(music)
+
