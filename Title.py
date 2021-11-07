@@ -1,11 +1,13 @@
 import Chart
 import Quize
 import Use
+import Home
 import Main
 import streamlit as st
 
 PAGES={
     "音声ファイルの文字起こし＆翻訳":Main,
+    "テキストを翻訳":Home,
     "NBAクイズ":Quize,
     "数字で見るNBA": Chart,
     "概要や使い方など": Use
