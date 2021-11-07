@@ -7,12 +7,13 @@ def app():
     
     st.title("NBA × 英語で学ぶ")
     st.write('▼このページで出来ることは以下の通りです。')
-    st.write('①パソコンの音声ファイルや、スマホで録画した動画の文字起こし＆翻訳')
-    st.write('②入力したテキストの和訳または英訳')
-    st.write('--------------------------------------------------')
+#     st.write('①パソコンの音声ファイルや、スマホで録画した動画の文字起こし＆翻訳')
+#     st.write('②入力したテキストの和訳または英訳')
+#     st.write('--------------------------------------------------')
+    st.write('パソコンの音声ファイルや、スマホで録画した動画の文字起こし＆翻訳')
     
     st.header('～音声ファイルの文字起こし ＆ 翻訳～')
-    fileObject = st.file_uploader(label = "音声ファイルをアップロードしてください" )
+    fileObject = st.file_uploader(label = '下の"Browse files"をタップ（クリック）して音声ファイルをアップロードしてください' )
 
     if fileObject:
         token, t_id = upload_file(fileObject)
