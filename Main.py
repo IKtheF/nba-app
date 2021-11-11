@@ -28,4 +28,9 @@ def app():
 
         st.subheader('▼翻訳結果')
         st.write(trans)
+        st.write('------------------------------')
+        st.write('翻訳する際にGoogleを用いているため、翻訳の精度はあまり高くありませんし不自然な日本語になってしまうことがあります。その場合は、以下のリンクに飛んでいただいて文字起こしされた/
+                 文章をコピペしてみてください。かなり高精度で翻訳してくれます。')
+        url='[高精度の翻訳はこちらから！](https://www.deepl.com/ja/translator)'
+        st.markdown(url,unsafe_allow_html=True)
     
