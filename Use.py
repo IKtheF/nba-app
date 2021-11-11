@@ -40,7 +40,7 @@ def app():
     st.subheader('▼数字で見るNBAの使い方')
     st.write('こちらに関しては、「数字で見るNBA」の本ページの方に詳しい説明は書いていますし、実際に触れていただいたほうが分かりやすいと思うので\
         ここでの説明は割愛させていただきます。')
-    st.write('「自分なりの考察」は考察と呼ぶにはあまりに浅はかなものしか書いていませんが、もしよろしければご覧になってください（笑）')
+    st.write('内容的にもかなり浅はかなものしか書いていませんが、もしよろしければご覧になってください（笑）')
 
     
     
@@ -51,7 +51,9 @@ def app():
     st.header('お知らせ')
     st.write('また、InstagramにNBAの絵を投稿しています。もし興味を持っていただけたなら、一度覗いてみてください！フォローもしていただけると嬉しいです！！')
     st.write('リンクに飛べない方は"l3gacy_flash"で検索していただけると幸いです。')
-    st.markdown('<a href="https://www.instagram.com/l3gacy_flash">Instagramはこちらから！</a>',unsafe_allow_html=True)
+    link='[Instagramはこちらから！](https://www.instagram.com/l3gacy_flash)'
+    st.markdown(link,unsafe_allow_html=True)
+    #st.markdown('<a href="https://www.instagram.com/l3gacy_flash">Instagramはこちらから！</a>',unsafe_allow_html=True)
 
     st.header('おまけ')
     music='videoplayback.mp4'
