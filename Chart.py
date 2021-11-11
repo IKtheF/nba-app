@@ -11,7 +11,9 @@ def app():
     st.write('気になる箇所はその部分をタップしていただくと、具体的な数値が画面に出てきます')
     st.write('ここに載っている数字は、全てBASKETBALL REFERENCEから取ってきたものです。リンクを貼っておくので、気になる人は覗いてみてください。\
         色々な情報が載っていて面白いと思います。')
-    st.markdown('<a href="https://www.basketball-reference.com/">BASKETBALL REFERENCE</a>',unsafe_allow_html=True)
+    page='[BASKETBALL REFERENCE](https://www.basketball-reference.com)'
+    st.markdown(page,unsafe_allow_html=True)
+    #st.markdown('<a href="https://www.basketball-reference.com/">BASKETBALL REFERENCE</a>',unsafe_allow_html=True)
 
     col1,col2,col3=st.columns(3)
 
