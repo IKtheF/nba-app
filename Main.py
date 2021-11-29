@@ -7,10 +7,10 @@ def app():
     
     st.title("NBA × 英語で学ぶ")
     st.write('▼このページで出来ることは以下の通りです。')
-    st.write('パソコンの音声ファイルやまたはスマホで録画した動画の文字起こし＆和訳')
+    st.write('スマホで録画した動画またはパソコンの動画ファイルの文字起こし＆和訳')
     url='[高精度の翻訳はこちらから！](https://www.deepl.com/ja/translator)'
     
-    st.header('～文字起こし ＆ 翻訳～')
+
     fileObject = st.file_uploader(label = '下の"Browse files"をタップ（クリック）して音声ファイルをアップロードしてください' )
 
     if fileObject:
