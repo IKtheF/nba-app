@@ -1,6 +1,6 @@
 import streamlit as st
 
-def app():    
+def app():
     st.header('～お好きな言葉を翻訳～')
     input_text=st.text_input('翻訳したい言葉を入力して下さい')
 
@@ -21,3 +21,4 @@ def app():
             result = tr.translate(input_text,src=pre,dest=post).text
             st.subheader('▼翻訳結果')
             st.write(result)
+
