@@ -1,13 +1,13 @@
 import Chart
 import Quize
 import Use
-import Home
+#import Home
 import Main
 import streamlit as st
 
 PAGES={
     "文字起こし＆和訳":Main,
-    "テキストを翻訳":Home,
+    #"テキストを翻訳":Home,
     "NBAクイズ":Quize,
     "数字で見るNBA": Chart,
     "概要や使い方など": Use
